@@ -1,0 +1,50 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"DinhKhoi5",
+    "password":"12334"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"DinhKhoi",
+    "password":"12334"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg1MDg3MjllMjNkNTExY2RjYThjMjciLCJpYXQiOjE2MTkzMzExODZ9.-caqBiaGz9eDFTEp9UhoZByV5YHNZ6dbc0xykvxXFz8
+
+{
+    "title":"Huong dan an com bang muong",
+    "description":"No description",
+    "url":"youtube.com"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDgyMzUxZjUyOTc2MjJlNmZkYTM1MTQiLCJpYXQiOjE2MjAzNTQwMzB9.5Lmj_IBcasEKjUgYkepZ0yriI7AnmateYaOPPBgHFz8
+
+###
+PUT http://localhost:5000/api/posts/608509fca17c0212b2560211
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg1MDg3MjllMjNkNTExY2RjYThjMjciLCJpYXQiOjE2MTkzMzExODZ9.-caqBiaGz9eDFTEp9UhoZByV5YHNZ6dbc0xykvxXFz8
+
+{
+    "title":"Hong huong dan tho bang mui nua",
+    "description":"No description",
+    "url":"youtube.com",
+    "status":"LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/posts/6084166a96427d2ae6135919
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDgyMzUxZjUyOTc2MjJlNmZkYTM1MTQiLCJpYXQiOjE2MTkzMzcwMzl9.icWgB_K8YnhT9dfxexLT4jlp1pFv3Bw3xFcMCTKkevM
